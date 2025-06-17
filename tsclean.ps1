@@ -365,9 +365,9 @@ for i in "${!FEATURES[@]}"; do
         ts_type=$(to_ts_type "$type")
         mongoose_type=$(to_mongoose_type "$type")
         entity_fields+="$name: $ts_type, "
-        dto_fields+="$name: $ts_type;\n  "
-        model_fields+="$name: { type: $mongoose_type, required: true },\n  "
-        validation_checks+="if (!$name) {\n      throw new CustomError(400, '$name is required');\n    }\n    "
+        dto_fields+="$name: $ts_type; "
+        model_fields+="$name: { type: $mongoose_type, required: true }, "
+        validation_checks+="if (!$name) {     throw new CustomError(400, '$name is required');   }   "
         if [ "$ts_type" = "string" ]; then
             sample_json+="\"$name\": \"sample_${name}\", "
         elif [ "$ts_type" = "number" ]; then
