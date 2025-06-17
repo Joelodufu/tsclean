@@ -525,7 +525,7 @@ EOL
     # Create Features/<feature>/delivery/middlewares/validate-<feature>.middleware.ts
     cat > "Features/$feature/delivery/middlewares/validate-$feature.middleware.ts" << EOL
 import { Request, Response, NextFunction } from 'express';
-import { CustomError } from '../../../Core/error/custom-error';
+import { CustomError } from '../../../../Core/error/custom-error';
 
 export const validate${Feature} = (req: Request, res: Response, next: NextFunction) => {
   const { $(for name in "${field_names[@]}"; do echo "$name,"; done | tr '\n' ' ' | sed 's/, /,/g' | sed 's/,$//') } = req.body;
@@ -541,7 +541,7 @@ import { Request, Response } from 'express';
 import { Create${Feature}UseCase, Create${Feature}Dto } from '../../domain/usecases/create-$feature.usecase';
 import { ${Feature}RepositoryImpl } from '../../data/repositories/$feature.repository';
 import { ${Feature}DataSource } from '../../data/datasources/$feature.datasource';
-import { CustomError } from '../../../Core/error/custom-error';
+import { CustomError } from '../../../../Core/error/custom-error';
 
 export class ${Feature}Controller {
   private create${Feature}UseCase: Create${Feature}UseCase;
