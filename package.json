@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "CLI to generate TypeScript Express API with clean architecture",
   "bin": {
-    "tsclean": "./tsclean.ps1"
+    "tsclean": "./tsclean"
   },
   "scripts": {
-    "install": "powershell -Command \"Copy-Item -Path './tsclean.ps1' -Destination (Join-Path -Path $env:APPDATA -ChildPath 'npm/tsclean.ps1')\""
+    "install": "chmod +x ./tsclean && chmod +x ./tsclean.sh || true"
   },
-  "author": "",
+  "author": "Joel Odufu",
   "license": "ISC"
 }
