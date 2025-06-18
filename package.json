@@ -3,10 +3,19 @@
   "version": "1.0.0",
   "description": "CLI to generate TypeScript Express API with clean architecture",
   "bin": {
-    "tsclean": "./tsclean"
+    "tsclean": "./dist/index.js"
   },
   "scripts": {
-    "install": "chmod +x ./tsclean && chmod +x ./tsclean.sh || true"
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.32",
+    "typescript": "^5.6.3"
   },
   "author": "Joel Odufu",
   "license": "ISC"
