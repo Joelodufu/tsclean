@@ -1,5 +1,5 @@
 {
-  "name": "tsclean",
+  "name": "@joelodufu/tsclean",
   "version": "1.0.0",
   "description": "CLI to generate TypeScript Express API with clean architecture",
   "bin": {
