@@ -20,6 +20,7 @@ interface Field {
   rule?: string;
 }
 
+//FEATURES DESTRUCTURED
 interface Feature {
   name: string;
   fields: string;
