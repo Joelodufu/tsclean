@@ -732,6 +732,7 @@ async function generateFeature(projectRoot: string, feature: string, fields: Fie
     path.join(featurePath, 'domain/usecases'),
     path.join(featurePath, 'domain/repositories'),
     path.join(featurePath, 'data/repositories'),
+    //another
     path.join(featurePath, 'data/datasources'),
     path.join(featurePath, 'data/models'),
     path.join(featurePath, 'delivery/routes'),
