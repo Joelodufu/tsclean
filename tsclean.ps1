@@ -6,9 +6,9 @@
 # Example: tsclean FoodStore ./ --feature user --fields name:string,email:string
 #          tsclean feature products --fields name:string,price:number
 
-DEFAULT_PROJECT_NAME="my-express-api"
+DEFAULT_PROJECT_NAME="my-express-api" # Default project name
 PROJECT_NAME="$DEFAULT_PROJECT_NAME"
-PATH_SPECIFIED="."
+PATH_SPECIFIED="." # Default path
 FEATURES=()
 FIELD_DEFS=()
 NODE_VERSION="18"
